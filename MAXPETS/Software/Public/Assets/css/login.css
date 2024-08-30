@@ -88,6 +88,11 @@ body{
     }
 }
 
+.box img{
+    width: 120px;
+    height: 120px;
+}
+
 .box form{
     position: absolute;
     inset: 4px;
@@ -104,6 +109,7 @@ body{
     font-weight: 500;
     text-align: center;
     letter-spacing: 0.1em;
+    margin-top: 35px;
 }
 
 .box form .inputBox{
@@ -132,7 +138,7 @@ body{
     left: 0;
     padding: 20px 10px 10px;
     pointer-events: none;
-    color: var(--app-accent);
+    color: #8f8f8f;
     font-size: 1em;
     letter-spacing: 0.05em;
     transition: 0.5s;
@@ -140,7 +146,7 @@ body{
 
 .box form .inputBox input:valid ~ span,
 .box form .inputBox input:focus ~ span{
-    color: var(--app-white);
+    color: #fff;
     font-size: 0.75em;
     transform: translateY(-34px);
 }
@@ -158,7 +164,7 @@ body{
 }
 
 .box form .inputBox:nth-child(2) i{
-    background: var(--app-white);
+    background: #45f3ff;
 }
 
 .box form .inputBox:nth-child(3) i{
@@ -184,14 +190,14 @@ body{
 
 .box form .links a:hover,
 .box form input[type="submit"]:hover{
-    color: var(--app-yellow);
+    color: #fff;
 }
 
 .box form input[type="submit"]{
     border: none;
     outline: none;
     padding: 9px 25px;
-    background: var(--app-accent);
+    background: #8f8f8f;
     color: #1c1c1c;
     cursor: pointer;
     font-size: 1em;
