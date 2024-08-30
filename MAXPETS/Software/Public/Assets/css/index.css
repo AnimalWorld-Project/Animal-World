@@ -146,69 +146,10 @@ body {
   margin-top: 20px;
 }
 
-.box form .inputBox {
-  position: relative;
-  width: 350px;
-  margin-top: 20px;
-}
-
-.box form .inputBox input {
-  position: relative;
-  width: 100%;
-  padding: 20px 10px 10px;
-  background: transparent;
-  outline: none;
-  border: none;
-  box-shadow: none;
-  color: var(--app-blue);
-  font-size: 1em;
-  letter-spacing: 0.05em;
-  transition: 0.5s;
-  z-index: 10;
-}
-
-.box form .inputBox span {
-  position: absolute;
-  left: 0;
-  padding: 20px 10px 10px;
-  pointer-events: none;
+.box form p {
   color: var(--app-white);
-  font-size: 1em;
-  letter-spacing: 0.05em;
-  transition: 0.5s;
-}
-
-.box form .inputBox input:valid ~ span,
-.box form .inputBox input:focus ~ span {
-  color: var(--app-accent);
-  font-size: 0.75em;
-  transform: translateY(-34px);
-}
-
-.box form .inputBox i {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 2px;
-  border-radius: 5px;
-  overflow: hidden;
-  transition: 0.5s;
-  pointer-events: none;
-}
-
-.box form .inputBox:nth-child(3) i {
+  text-align: center;
   margin-top: 20px;
-  background: var(--app-white);
-}
-
-.box form .inputBox:nth-child(4) i {
-  background: var(--app-white);
-}
-
-.box form .inputBox input:valid ~ i,
-.box form .inputBox input:focus ~ i {
-  height: 44px;
 }
 
 .lastButtons {
@@ -216,31 +157,11 @@ body {
   display: flex;
 }
 
-.forgotPassword {
-  color: var(--app-white);
-  font-size: 0.75em;
-  flex-direction: row;
-  text-align: right;
-}
-
-.box form .links {
-  margin-top: 20px;
-}
-
-.box form .links a {
-  font-size: 0.75em;
-  color: var(--app-white);
-}
-
-.box form input[type="submit"]:hover {
+button:hover {
   background-color: var(--app-yellow);
 }
 
-.box form .links a:hover {
-  color: var(--app-yellow);
-}
-
-.box form input[type="submit"] {
+button {
   border: none;
   outline: none;
   padding: 9px 25px;
@@ -250,11 +171,11 @@ body {
   font-size: 1em;
   border-radius: 5px;
   font-weight: 600;
-  width: 50%;
+  width: 45%;
   margin-top: 20px;
 }
 
-.box form input[type="submit"]:active {
+button:active {
   opacity: 0.5;
 }
 
