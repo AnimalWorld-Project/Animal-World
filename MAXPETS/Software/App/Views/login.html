@@ -17,35 +17,40 @@
   </head>
 
   <body>
-    <div class="box card">
-      <span class="borderLine"></span>
-      <form>
-        <img
-          src="\MAXPETS\Software\Public\Assets\Img\MAXPETS logo.jpg"
-          alt=""
-        />
-        <h2>Inicio de Sesión</h2>
-        <div class="inputBox">
-          <input type="text" required />
-          <span>Correo Electrónico</span>
-          <i></i>
-        </div>
-        <div class="inputBox">
-          <input type="password" required />
-          <span>Contraseña</span>
-          <i></i>
-        </div>
-        <div class="lastButtons">
-            <input type="submit" value="Iniciar Sesión" href="index.html"/>
-            <div class="links">
+    <div class="container">
+      <div class="box card">
+        <span class="borderLine"></span>
+        <form action="main.html">
+          <img
+            src="\MAXPETS\Software\Public\Assets\Img\MAXPETS logo.jpg"
+            alt=""
+          />
+          <h2>Inicio de Sesión</h2>
+          <div class="inputBox">
+            <input type="text" required />
+            <span>Correo Electrónico</span>
+            <i></i>
+          </div>
+          <div class="inputBox">
+            <input type="password" required />
+            <span>Contraseña</span>
+            <i></i>
+          </div>
+          <div class="lastButtons">
+            <input type="submit" value="Iniciar Sesión" href="main.html" />
+            <div class="linkRecover">
               <p class="forgotPassword">¿Olvidaste tu contraseña?</p>
-              <a href="index.html">Restablecer aquí</a>
+              <a href="recoverPassword.html">Restablecer aquí</a>
             </div>
-        </div>
-      </form>
+          </div>
+        </form>
+      </div>
     </div>
-    <div>
-      <footer class="credits row row-cols-1 row-cols-sm-2 row-cols-md-5 align-bottom">
+
+    <div class="footer">
+      <footer
+        class="credits row row-cols-1 row-cols-sm-2 row-cols-md-5 align-bottom"
+      >
         <div class="col mb-3">
           <p>Animal World Team</p>
         </div>

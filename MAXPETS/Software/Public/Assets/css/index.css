@@ -23,8 +23,8 @@ body {
 
 .box {
   position: absolute;
-  width: 440px;
-  height: 400px;
+  width: 450px;
+  height: 450px;
   background: var(--app-blue);
   border-radius: 15px;
   overflow: hidden;
@@ -35,8 +35,8 @@ body {
   position: absolute;
   top: -50%;
   left: -50%;
-  width: 440px;
-  height: 400px;
+  width: 450px;
+  height: 450px;
   background: linear-gradient(
     0deg,
     transparent,
@@ -55,7 +55,7 @@ body {
   position: absolute;
   top: -50%;
   left: -50%;
-  width: 440px;
+  width: 450px;
   height: 400px;
   background: linear-gradient(
     0deg,
@@ -82,7 +82,7 @@ body {
   position: absolute;
   top: -50%;
   left: -50%;
-  width: 440px;
+  width: 450px;
   height: 400px;
   background: linear-gradient(
     0deg,
@@ -103,7 +103,7 @@ body {
   position: absolute;
   top: -50%;
   left: -50%;
-  width: 440px;
+  width: 450px;
   height: 400px;
   background: linear-gradient(
     0deg,
@@ -165,21 +165,19 @@ body {
   display: flex;
 }
 
-button:hover {
+.roles:hover {
   background-color: var(--app-yellow);
 }
 
-button {
-  border: none;
-  outline: none;
-  padding: 9px 25px;
-  background: var(--app-accent);
-  cursor: pointer;
-  font-size: 1em;
-  border-radius: 5px;
-  font-weight: 600;
-  width: 45%;
+.roles{
+  padding: 9px;
   margin-top: 20px;
+  font-size: 1em;
+  font-weight: 600;
+  border-radius: 5px;
+  width: 45%;
+  background: var(--app-accent);
+  text-align: center;
 }
 
 a{
@@ -187,7 +185,7 @@ a{
   text-decoration: none;
 }
 
-button:active {
+.roles:active {
   opacity: 0.5;
 }
 

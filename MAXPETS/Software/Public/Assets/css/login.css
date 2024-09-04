@@ -6,15 +6,23 @@ html {
 
 body {
   background-color: transparent;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   align-items: center;
   flex-direction: column;
 }
 
-.box {
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90%;
   position: relative;
-  margin-top: 30px;
+  padding-bottom: 2.5rem;
+}
+
+.box {
+  position: absolute;
   width: 440px;
   height: 460px;
   background: var(--app-blue);
@@ -219,15 +227,13 @@ body {
 .forgotPassword {
   color: var(--app-white);
   font-size: 0.75em;
-  flex-direction: row;
-  text-align: right;
 }
 
-.box form .links {
+.box form .linkRecover {
   margin-top: 20px;
 }
 
-.box form .links a {
+.box form .linkRecover a {
   font-size: 0.75em;
   color: var(--app-white);
 }
@@ -236,14 +242,13 @@ body {
   background-color: var(--app-yellow);
 }
 
-.box form .links a:hover {
+.box form .linkRecover a:hover {
   color: var(--app-yellow);
 }
 
 .box form input[type="submit"] {
   border: none;
   outline: none;
-  padding: 9px 25px;
   background: var(--app-accent);
   color: var(--app-blue);
   cursor: pointer;
@@ -258,9 +263,8 @@ body {
   opacity: 0.5;
 }
 
-footer {
-  padding-top: 20px;
+.footer {
   background-color: transparent;
-  max-height: 0;
-  margin-bottom: 20px;
+  position: absolute;
+  bottom: 0;
 }
