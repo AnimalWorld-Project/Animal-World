@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Inicial - Veterinaria</title>
+    <link rel="stylesheet" href="inicio.css">
+</head>
+<body>
+    <div class="sidebar" id="sidebar">
+        <div class="logo">
+            <img src="/MAXPETS/Software/Public/Assets/Img/logo.jpeg" alt="Logo">
+        </div>
+        <ul class="menu">
+            <li><a href="#">Usuarios</a></li>
+            <li><a href="#">Mascota / Paciente</a></li>
+            <li><a href="#">Citas</a></li>
+            <li><a href="#">Programar servicio</a></li>
+            <li><a href="#">Orden de servicio</a></li>
+            <li><a href="#">Estadística</a></li>
+            <li><a href="#">Registro de producto</a></li>
+        </ul>
+    </div>
+
+    <div class="toggle-sidebar" id="toggle-sidebar">
+        <span>&#9664;</span> <!-- Flecha para ocultar/desplegar -->
+    </div>
+
+    <div class="main-content" id="main-content">
+        <div class="header">
+            <div class="notifications">
+                <img src="notification_icon.png" alt="Notification Icon" id="notification-icon">
+                <div class="notification-dropdown">
+                    <p>No hay nuevas notificaciones</p>
+                </div>
+            </div>
+            <div class="account">
+                <span>Admin</span>
+                <img src="profile_icon.png" alt="Profile Icon" id="account-icon">
+                <div class="dropdown">
+                    <ul>
+                        <li><a href="/MAXPETS/Software/App/Views/profile.html">Cuenta</a></li>
+                        <li><a href="#">Cerrar sesión</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <h1>Bienvenido a MAXPETS</h1>
+            <p>Sistema de Gestión de Historial Médico para veterinarias</p>
+        </div>
+    </div>
+
+    <script src="inicio.js"></script>
+</body>
+</html>
+
