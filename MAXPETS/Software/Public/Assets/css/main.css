@@ -9,189 +9,305 @@ body {
   height: 100vh;
 }
 
-
 /*--------------------CODE FOR SIDEBAR--------------------*/
-ul{
-    padding-left: 0;
+ul {
+  padding-left: 0;
 }
 
-.sidebar{
-    position: absolute;
-    width: 70px;
-    height: 100%;
-    background-color: var(--app-yellow);
-    transition: 0.5s;
-    padding-left: 5px;
-    overflow: hidden;
+.sidebar {
+  position: absolute;
+  width: 80px;
+  height: 100%;
+  background-color: var(--app-blue);
+  transition: 0.5s;
+  padding-left: 5px;
+  overflow: hidden;
+  z-index: 1;
 }
 
-.sidebar.active{
-    width: 300px;
+.sidebar.active {
+  width: 260px;
 }
 
-.sidebar ul{
-    position: relative;
-    height: 100%;
+.sidebar ul {
+  position: relative;
+  height: 100%;
 }
 
-.sidebar ul li{
-    position: relative;
-    list-style: none;
+.sidebar ul li {
+  position: relative;
+  list-style: none;
 }
 
-.sidebar ul li.active{
-    background: var(--app-blue);
-    border-top-left-radius: 50px;
-    border-bottom-left-radius: 50px;
+.sidebar ul li.active {
+  background: var(--app-accent);
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
 }
 
-.sidebar ul li.active::before{
-    content: '';
-    position: absolute;
-    top: -20px;
-    right: 0;
-    width: 20px;
-    height: 20px;
-    border-bottom-right-radius: 20px;
-    box-shadow: 5px 5px 0 5px var(--app-blue);
-    background: transparent;
+.sidebar ul li.active::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: 5px 5px 0 5px var(--app-accent);
+  background: transparent;
 }
 
-.sidebar ul li.active::after{
-    content: '';
-    position: absolute;
-    bottom: -20px;
-    right: 0;
-    width: 20px;
-    height: 20px;
-    border-top-right-radius: 20px;
-    box-shadow: 5px -5px 0 5px var(--app-blue);
-    background: transparent;
+.sidebar ul li.active::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  border-top-right-radius: 20px;
+  box-shadow: 5px -5px 0 5px var(--app-accent);
+  background: transparent;
 }
 
-img{
-    width: 100px;
-    height: 100px;
-    border-radius: 5px;
+img {
+  width: 70px;
+  height: 70px;
+  border-radius: 5px;
 }
 
-.sidebar ul li.logo{
-    margin-bottom: 50px;
+.sidebar ul li.logo {
+  position: relative;
+  display: flex;
+  white-space: nowrap;
+  margin-bottom: 25px;
+  margin-top: 5px;
 }
 
-.sidebar ul li.logo .icon{
-    font-size: 2em;
-    color: var(--app-blue);
+.sidebar ul li.logo .text {
+  width: 180px;
+  font-size: 1.2em;
+  font-weight: 500;
+  color: var(--app-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 15px;
 }
 
-.sidebar ul li.logo .text{
-    font-size: 1.2em;
-    font-weight: 500;
-    color: var(--app-blue);
+.sidebar ul li a {
+  position: relative;
+  display: flex;
+  white-space: nowrap;
+  text-decoration: none;
 }
 
-.sidebar ul li a{
-    position: relative;
-    display: flex;
-    white-space: nowrap;
-    text-decoration: none;
+.sidebar ul li a .icon {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 60px;
+  padding-left: 10px;
+  height: 70px;
+  font-size: 1.5em;
+  color: var(--app-white);
+  transition: 0.5s;
 }
 
-.sidebar ul li a .icon{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-width: 60px;
-    padding-left: 10px;
-    height: 70px;
-    font-size: 1.5em;
-    color: var(--app-blue);
-    transition: 0.5s;
+.sidebar ul li a .text {
+  position: relative;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  font-size: 1em;
+  color: var(--app-accent);
+  padding-left: 15px;
+  padding-right: 15px;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
 }
 
-.sidebar ul li a .text{
-    position: relative;
-    height: 70px;
-    display: flex;
-    align-items: center;
-    font-size: 1em;
-    color: var(--app-blue);
-    padding-left: 15px;
-    letter-spacing: 0.05em;
-    transition: 0.5s;
+.sidebar ul li.active a .icon {
+  color: var(--app-yellow);
 }
 
-.sidebar ul li.active a .icon,
-.sidebar ul li.active a .text{
-    color: var(--app-accent);
+.sidebar ul li.active a .text {
+  color: var(--app-blue);
 }
 
 .sidebar ul li:hover a .icon,
-.sidebar ul li:hover a .text{
-    color: var(--app-accent);
+.sidebar ul li:hover a .text {
+  color: var(--app-yellow);
 }
 
-.sidebar ul li.active a .icon::before{
-    content: '';
-    position: absolute;
-    inset: 5px;
-    width: 60px;
-    background: var(--app-yellow);
-    border-radius: 50%;
-    transition: 0.5s;
+.sidebar ul li:hover.active a .icon {
+  color: var(--app-blue);
 }
 
-.sidebar ul li:hover.active a .icon::before{
-    background: var(--app-blue);
+.sidebar ul li:hover.active a .text {
+  color: var(--app-blue);
+  opacity: 0.7;
 }
 
-.bottom{
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+.sidebar ul li.active a .icon::before {
+  content: "";
+  position: absolute;
+  inset: 5px;
+  width: 60px;
+  background: var(--app-blue);
+  border-radius: 50%;
+  transition: 0.5s;
 }
 
-.menuToggle{
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    height: 50px;
-    width: 50px;
-    background: var(--app-blue);
-    z-index: 1000;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.sidebar ul li:hover.active a .icon::before {
+  background: var(--app-yellow);
 }
 
-.menuToggle::before{
-    content: '';
-    position: absolute;
-    width: 30px;
-    height: 3px;
-    background: var(--app-accent);
-    transform: translateY(-9px);
-    transition: 0.5s;
-    box-shadow: 0 9px 0 var(--app-accent);
+.bottom {
+  position: absolute;
+  bottom: 0;
+  height: 70px;
+  width: 100%;
+  display: flex;
 }
 
-.menuToggle::after{
-    content: '';
-    position: absolute;
-    width: 30px;
-    height: 3px;
-    background: var(--app-accent);
-    transform: translateY(9px);
-    transition: 0.5s;
+.menuToggle {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  z-index: 1000;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
 }
 
-.menuToggle.active::before{
-    transform: translateY(0px) rotate(45deg);
-    box-shadow: 0 0 0 var(--app-accent);
+.menuToggle::before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  background: var(--app-accent);
+  transform: translateY(-9px);
+  transition: 0.5s;
+  box-shadow: 0 9px 0 var(--app-accent);
 }
 
-.menuToggle.active::after{
-    transform: translateY(0px) rotate(-45deg);
+.menuToggle::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  background: var(--app-accent);
+  transform: translateY(9px);
+  transition: 0.5s;
+}
+
+.menuToggle.active::before {
+  transform: translateY(0px) rotate(45deg);
+  box-shadow: 0 0 0 var(--app-accent);
+}
+
+.menuToggle.active::after {
+  transform: translateY(0px) rotate(-45deg);
+}
+
+/*--------------------CODE FOR CONTENT--------------------*/
+.content {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: calc(100% - 80px);
+  left: 80px;
+  height: 100vh;
+  transition: 0.5s;
+}
+
+.content.active {
+  width: calc(100% - 260px);
+  left: 260px;
+}
+
+.header {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  background: var(--app-blue);
+}
+
+.header ion-icon {
+  font-size: 2.5em;
+  color: var(--app-white);
+}
+
+.notifications {
+  position: relative;
+  height: 70px;
+  width: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.user {
+  position: relative;
+  height: 70px;
+  width: 300px;
+  gap: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: var(--app-accent);
+}
+
+.user p {
+  margin-bottom: 0;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+.showContainer {
+  background: linear-gradient(to top, var(--app-yellow), var(--app-blue));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding-bottom: 2.5rem;
+}
+
+.showContainer h2 {
+  color: var(--app-accent);
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+
+.showContainer p{
+  color: var(--app-blue);
+  text-align: center;
+  margin-top: 20px;
+}
+
+/*--------------------CODE FOR FOOTER--------------------*/
+.footer {
+  background-color: transparent;
+  position: absolute;
+  bottom: 0;
+}
+
+.footer p,
+.footer a{
+  color: var(--app-blue);
+  text-decoration: none;
 }

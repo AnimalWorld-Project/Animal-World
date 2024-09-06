@@ -16,22 +16,19 @@
     />
   </head>
   <body>
-    <div class="menuToggle"></div>
     <div class="sidebar">
       <ul>
         <li class="logo">
-          <a href="#">
-            <div>
-              <img
-                src="\MAXPETS\Software\Public\Assets\Img\MAXPETS logo.jpg"
-                alt=""
-              />
-            </div>
-            <div class="text">MAXPETS</div>
-          </a>
+          <div>
+            <img
+              src="\MAXPETS\Software\Public\Assets\Img\MAXPETS logo.jpg"
+              alt=""
+            />
+          </div>
+          <div class="text">MAXPETS</div>
         </li>
         <div class="menuList">
-          <li class="active">
+          <li>
             <a href="#">
               <div class="icon">
                 <ion-icon name="people-outline"></ion-icon>
@@ -87,14 +84,81 @@
           </li>
         </div>
         <div class="bottom">
-          <li>
-            <a href="#">
-              <div class="icon">
-              </div>
-            </a>
-          </li>
+          <div class="menuToggle"></div>
         </div>
       </ul>
+    </div>
+
+    <div class="content">
+      <div class="header">
+        <div class="notifications">
+          <ion-icon name="notifications-outline"></ion-icon>
+        </div>
+        <div class="user">
+          <ion-icon name="person-circle-outline"></ion-icon>
+          <div class="userInfo">
+            <p class="username">Admin</p>
+            <p class="email">admin@gmail.com</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="showContainer">
+        <h2>Bienvenido a MAXPETS</h2>
+        <p>Sistema de Gestión de Historial Médico para Veterinarias</p>
+      </div>
+
+      <div class="footer">
+        <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 align-bottom">
+          <div class="col mb-3">
+            <p>Animal World Team</p>
+          </div>
+
+          <div class="col mb-3">
+            <p>Camilo Perez</p>
+            <p>capm717@gmail.com</p>
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a
+                  href="https://github.com/KM1L0-717""
+                  >KM1L0-717</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="col mb-3">
+            <p>Kevin Cáceres</p>
+            <p></p>
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a
+                  href="https://github.com/Kront3793"
+                  >Kront3793</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="col mb-3">
+            <p>Sofía Rojas</p>
+            <p></p>
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a
+                  href="https://github.com/Aristocraciafalsa"
+                  >Aristocraciafalsa</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="col mb-8">
+            <p>SENA Productive Project</p>
+            <p>©2024 All Rights Reserved</p>
+          </div>
+        </footer>
+      </div>
     </div>
     <script
       type="module"
@@ -106,21 +170,21 @@
     ></script>
 
     <script>
-        let menuToggle = document.querySelector('.menuToggle');
-        let sidebar = document.querySelector('.sidebar');
-        menuToggle.onclick = function(){
-            menuToggle.classList.toggle('active');
-            sidebar.classList.toggle('active');
-        }
+      let menuToggle = document.querySelector(".menuToggle");
+      let sidebar = document.querySelector(".sidebar");
+      let content = document.querySelector(".content");
+      menuToggle.onclick = function () {
+        menuToggle.classList.toggle("active");
+        sidebar.classList.toggle("active");
+        content.classList.toggle("active");
+      };
 
-        let menuList = document.querySelectorAll('.menuList li');
-        function activeLink(){
-            menuList.forEach((item) =>
-            item.classList.remove('active'));
-            this.classList.add('active')
-        }
-        menuList.forEach((item) =>
-        item.addEventListener('click',activeLink));
+      let menuList = document.querySelectorAll(".menuList li");
+      function activeLink() {
+        menuList.forEach((item) => item.classList.remove("active"));
+        this.classList.add("active");
+      }
+      menuList.forEach((item) => item.addEventListener("click", activeLink));
     </script>
   </body>
 </html>

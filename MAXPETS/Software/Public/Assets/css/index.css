@@ -195,3 +195,9 @@ a{
   position: absolute;
   bottom: 0;
 }
+
+.footer p,
+.footer a{
+  color: var(--app-blue);
+  text-decoration: none;
+}
