@@ -1,0 +1,396 @@
+@import url("global.css");
+
+html {
+  background: linear-gradient(to top, var(--app-yellow), var(--app-blue));
+}
+
+body {
+  background-color: transparent;
+  height: 100vh;
+}
+
+/*--------------------CODE FOR SIDEBAR--------------------*/
+ul {
+  padding-left: 0;
+}
+
+.sidebar {
+  position: absolute;
+  width: 80px;
+  height: 100%;
+  background-color: var(--app-blue);
+  transition: 0.5s;
+  padding-left: 5px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.sidebar.active {
+  width: 260px;
+}
+
+.sidebar ul {
+  position: relative;
+  height: 100%;
+}
+
+.sidebar ul li {
+  position: relative;
+  list-style: none;
+}
+
+.sidebar ul li.active {
+  background: var(--app-accent);
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+
+.sidebar ul li.active::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: 5px 5px 0 5px var(--app-accent);
+  background: transparent;
+}
+
+.sidebar ul li.active::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  border-top-right-radius: 20px;
+  box-shadow: 5px -5px 0 5px var(--app-accent);
+  background: transparent;
+}
+
+img {
+  width: 70px;
+  height: 70px;
+  border-radius: 5px;
+}
+
+.sidebar ul li.logo {
+  position: relative;
+  display: flex;
+  white-space: nowrap;
+  margin-bottom: 25px;
+  margin-top: 5px;
+}
+
+.sidebar ul li.logo .text {
+  width: 180px;
+  font-size: 1.2em;
+  font-weight: 500;
+  color: var(--app-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 15px;
+}
+
+.sidebar ul li a {
+  position: relative;
+  display: flex;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.sidebar ul li a .icon {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 60px;
+  padding-left: 10px;
+  height: 70px;
+  font-size: 1.5em;
+  color: var(--app-white);
+  transition: 0.5s;
+}
+
+.sidebar ul li a .text {
+  position: relative;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  font-size: 1em;
+  color: var(--app-accent);
+  padding-left: 15px;
+  padding-right: 15px;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+}
+
+.sidebar ul li.active a .icon {
+  color: var(--app-yellow);
+}
+
+.sidebar ul li.active a .text {
+  color: var(--app-blue);
+}
+
+.sidebar ul li:hover a .icon,
+.sidebar ul li:hover a .text {
+  color: var(--app-yellow);
+}
+
+.sidebar ul li:hover.active a .icon {
+  color: var(--app-blue);
+}
+
+.sidebar ul li:hover.active a .text {
+  color: var(--app-blue);
+  opacity: 0.7;
+}
+
+.sidebar ul li.active a .icon::before {
+  content: "";
+  position: absolute;
+  inset: 5px;
+  width: 60px;
+  background: var(--app-blue);
+  border-radius: 50%;
+  transition: 0.5s;
+}
+
+.sidebar ul li:hover.active a .icon::before {
+  background: var(--app-yellow);
+}
+
+.bottom {
+  position: absolute;
+  bottom: 0;
+  height: 70px;
+  width: 100%;
+  display: flex;
+}
+
+.menuToggle {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  z-index: 1000;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.menuToggle::before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  background: var(--app-accent);
+  transform: translateY(-9px);
+  transition: 0.5s;
+  box-shadow: 0 9px 0 var(--app-accent);
+}
+
+.menuToggle::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  background: var(--app-accent);
+  transform: translateY(9px);
+  transition: 0.5s;
+}
+
+.menuToggle.active::before {
+  transform: translateY(0px) rotate(45deg);
+  box-shadow: 0 0 0 var(--app-accent);
+}
+
+.menuToggle.active::after {
+  transform: translateY(0px) rotate(-45deg);
+}
+
+/*--------------------CODE FOR CONTENT--------------------*/
+.content {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: calc(100% - 80px);
+  left: 80px;
+  height: 100vh;
+  transition: 0.5s;
+}
+
+.content.active {
+  width: calc(100% - 260px);
+  left: 260px;
+}
+
+.header {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  background: var(--app-blue);
+}
+
+.header ion-icon {
+  font-size: 2.5em;
+  color: var(--app-white);
+}
+
+.notifications {
+  position: relative;
+  height: 70px;
+  width: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.user {
+  position: relative;
+  height: 70px;
+  width: 300px;
+  gap: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: var(--app-accent);
+}
+
+.user p {
+  margin-bottom: 0;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+.showContainer {
+  background: linear-gradient(to top, var(--app-yellow), var(--app-blue));
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding-bottom: 2.5rem;
+}
+
+.showContainer h2 {
+  color: var(--app-accent);
+  font-weight: 500;
+  text-align: left;
+  letter-spacing: 0.1em;
+}
+
+.showContainer p {
+  color: var(--app-accent);
+  text-align: left;
+  margin-top: 10px;
+}
+
+/*--------------------CODE FOR ORDER SERVICE--------------------*/
+.orderService {
+  position: relative;
+  width: 1200px;
+  min-height: 400px;
+  background-color: var(--app-blue);
+  border: 1px solid var(--app-accent);
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#dycalendar {
+  width: 100%;
+  padding: 10px;
+}
+
+#dycalendar table {
+  width: 100%;
+  margin-top: 10px;
+}
+
+#dycalendar table tr:nth-child(1) td {
+  background: var(--app-yellow);
+  color: var(--app-blue);
+  padding: 0;
+  font-weight: 600;
+  height: 20px;
+  cursor: default;
+}
+
+.dycalendar-span-month-year {
+  color: var(--app-white);
+  font-size: 1.5em;
+}
+
+.dycalendar-prev-next-btn.prev-btn,
+.dycalendar-prev-next-btn.next-btn {
+  color: var(--app-accent);
+  font-size: 24px;
+}
+
+.dycalendar-prev-next-btn.prev-btn {
+  right: 600px;
+}
+
+.dycalendar-prev-next-btn.next-btn {
+  left: 600px;
+}
+
+#dycalendar table td {
+  background: var(--app-accent);
+  color: var(--app-blue);
+  cursor: pointer;
+  height: 60px;
+  border-radius: 5px;
+}
+
+#dycalendar table td:hover {
+  background: var(--app-blue);
+  color: var(--app-yellow);
+}
+
+.dycalendar-month-container .dycalendar-today-date,
+.dycalendar-month-container .dycalendar-target-date {
+  background: var(--app-blue) !important;
+  color: var(--app-accent) !important;
+  border-radius: 5px;
+}
+
+.detailService {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+
+/*--------------------CODE FOR FOOTER--------------------*/
+.footer {
+  background-color: transparent;
+  position: absolute;
+  bottom: 0;
+}
+
+.footer p,
+.footer a {
+  color: var(--app-blue);
+  text-decoration: none;
+}
