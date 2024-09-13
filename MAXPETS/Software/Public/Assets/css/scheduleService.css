@@ -302,7 +302,7 @@ img {
 .calendar {
   position: relative;
   width: 1200px;
-  min-height: 400px;
+  height: 400px;
   background-color: var(--app-blue);
   border: 1px solid var(--app-accent);
   border-radius: 15px;

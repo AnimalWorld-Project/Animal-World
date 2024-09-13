@@ -302,85 +302,86 @@ img {
 .orderService {
   position: relative;
   width: 1200px;
-  min-height: 400px;
+  height: 400px;
+  padding: 30px;
   background-color: var(--app-blue);
   border: 1px solid var(--app-accent);
   border-radius: 15px;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+
+.petInfo{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
   justify-content: center;
   align-items: center;
 }
 
-#dycalendar {
-  width: 100%;
-  padding: 10px;
+.clientInfo{
+  display: flex;
+  gap: 20px;
+  flex-direction: row;
 }
 
-#dycalendar table {
-  width: 100%;
-  margin-top: 10px;
+.petPhoto{
+  width: 150px;
+  height: 150px;
+  margin-bottom: 7px;
+  align-self: center;
 }
 
-#dycalendar table tr:nth-child(1) td {
-  background: var(--app-yellow);
-  color: var(--app-blue);
-  padding: 0;
-  font-weight: 600;
-  height: 20px;
-  cursor: default;
-}
-
-.dycalendar-span-month-year {
+.label .labelType{
   color: var(--app-white);
-  font-size: 1.5em;
+  text-align: center;
+  margin-bottom: 0;
+  margin-top: 0;
 }
 
-.dycalendar-prev-next-btn.prev-btn,
-.dycalendar-prev-next-btn.next-btn {
-  color: var(--app-accent);
-  font-size: 24px;
-}
-
-.dycalendar-prev-next-btn.prev-btn {
-  right: 600px;
-}
-
-.dycalendar-prev-next-btn.next-btn {
-  left: 600px;
-}
-
-#dycalendar table td {
-  background: var(--app-accent);
+.label .labelInfo{
+  margin-top: 0;
+  margin-bottom: 30px;
   color: var(--app-blue);
-  cursor: pointer;
-  height: 60px;
+  width: 170px;
+  font-weight: 100;
   border-radius: 5px;
+  background: var(--app-white);
+  text-align: center;
 }
 
-#dycalendar table td:hover {
-  background: var(--app-blue);
-  color: var(--app-yellow);
+.orderService .buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
-.dycalendar-month-container .dycalendar-today-date,
-.dycalendar-month-container .dycalendar-target-date {
-  background: var(--app-blue) !important;
-  color: var(--app-accent) !important;
+.roles:hover {
+  background-color: var(--app-yellow);
+}
+
+.roles{
+  width: 170px;
+  height: 40px;
+  padding: 9px;
+  font-size: 1em;
+  font-weight: 600;
   border-radius: 5px;
+  background: var(--app-accent);
+  text-align: center;
 }
 
-.detailService {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  }
+a{
+  color: var(--app-blue);
+  text-decoration: none;
+}
+
+.roles:active {
+  opacity: 0.5;
+}
+
 
 /*--------------------CODE FOR FOOTER--------------------*/
 .footer {

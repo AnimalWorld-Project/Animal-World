@@ -192,6 +192,7 @@ body {
   color: var(--app-accent);
   font-size: 0.75em;
   transform: translateY(-34px);
+  position: absolute;
 }
 
 .box form .inputBox i {
