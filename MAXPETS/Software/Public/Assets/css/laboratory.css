@@ -299,7 +299,7 @@ img {
 }
 
 /*--------------------CODE FOR ORDER SERVICE--------------------*/
-.orderService {
+form {
   position: relative;
   width: 1200px;
   height: 400px;
@@ -308,79 +308,73 @@ img {
   border: 1px solid var(--app-accent);
   border-radius: 15px;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  color: var(--app-accent);
+}
+
+.firstRow,
+.secondRow,
+.observSubmit {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  flex-direction: row;
 }
 
-.petInfo{
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-}
-
-.clientInfo{
-  display: flex;
-  gap: 20px;
-  flex-direction: row;
-}
-
-.petPhoto{
-  width: 100%;
-  height: 150px;
-  margin-bottom: 6px;
-  border: 1px solid var(--app-accent);
-  
-}
-
-.label .labelType{
-  color: var(--app-white);
-  text-align: center;
-  margin-bottom: 0;
-  margin-top: 0;
-}
-
-.label .labelInfo{
-  margin-top: 0;
-  margin-bottom: 30px;
-  color: var(--app-blue);
-  width: 170px;
-  font-weight: 100;
-  border-radius: 5px;
-  background: var(--app-white);
-  text-align: center;
-}
-
-.orderService .buttons {
+.firstRow div,
+.secondRow div,
+.observSubmit div {
   display: flex;
   flex-direction: column;
-  gap: 30px;
 }
 
-.services:hover {
+.observSubmit div {
+  width: 70%;
+  height: 100px;
+}
+
+.observSubmit div input{
+    padding: 5px 5px 5px;
+    height: 100%;
+}
+
+form input, select {
+    background: var(--app-white);
+    padding: 5px 5px 5px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    box-shadow: none;
+    color: var(--app-blue);
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+    z-index: 10;
+  }
+
+form input[type="submit"] {
+  border: none;
+  outline: none;
+  background: var(--app-accent);
+  color: var(--app-blue);
+  cursor: pointer;
+  font-size: 1em;
+  border-radius: 5px;
+  font-weight: 600;
+  height: 40px;
+  width: 200px;
+}
+
+form input[type="submit"]:hover {
   background-color: var(--app-yellow);
 }
 
-.services{
-  width: 170px;
-  height: 40px;
-  padding: 9px;
-  font-size: 1em;
-  font-weight: 600;
-  border-radius: 5px;
-  background: var(--app-accent);
-  text-align: center;
-}
-
-a{
-  color: var(--app-blue);
-  text-decoration: none;
-}
-
-.services:active {
+form input[type="submit"]:active {
   opacity: 0.5;
 }
-
 
 /*--------------------CODE FOR FOOTER--------------------*/
 .footer {

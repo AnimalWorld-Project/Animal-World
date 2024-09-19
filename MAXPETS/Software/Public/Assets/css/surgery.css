@@ -1,12 +1,13 @@
 @import url("global.css");
 
 html {
-  background: linear-gradient(to top, var(--app-yellow), var(--app-blue));
+  background: linear-gradient(to top, var(--app-yellow), var(--app-blue)) repeat
+    var(--app-yellow);
 }
 
 body {
   background-color: transparent;
-  height: 100vh;
+  height: 100%;
 }
 
 /*--------------------CODE FOR SIDEBAR--------------------*/
@@ -15,9 +16,9 @@ ul {
 }
 
 .sidebar {
-  position: absolute;
+  position: fixed;
   width: 80px;
-  height: 100%;
+  height: 137%;
   background-color: var(--app-blue);
   transition: 0.5s;
   padding-left: 5px;
@@ -164,7 +165,7 @@ img {
 }
 
 .bottom {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   height: 70px;
   width: 100%;
@@ -299,93 +300,111 @@ img {
 }
 
 /*--------------------CODE FOR ORDER SERVICE--------------------*/
-.orderService {
+form {
   position: relative;
   width: 1200px;
-  height: 400px;
-  padding: 0 70px;
+  padding: 30px 70px;
   background-color: var(--app-blue);
   border: 1px solid var(--app-accent);
   border-radius: 15px;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--app-accent);
+  gap: 10px;
+}
+
+.division {
+  height: 1px;
+  width: 100%;
+  background-color: var(--app-yellow);
+  margin: 20px;
+}
+
+.firstRow,
+.observSubmit {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  flex-direction: row;
 }
 
-.petInfo{
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-}
-
-.clientInfo{
-  display: flex;
-  gap: 20px;
-  flex-direction: row;
-}
-
-.petPhoto{
-  width: 100%;
-  height: 150px;
-  margin-bottom: 6px;
-  border: 1px solid var(--app-accent);
-  
-}
-
-.label .labelType{
-  color: var(--app-white);
-  text-align: center;
-  margin-bottom: 0;
-  margin-top: 0;
-}
-
-.label .labelInfo{
-  margin-top: 0;
-  margin-bottom: 30px;
-  color: var(--app-blue);
-  width: 170px;
-  font-weight: 100;
-  border-radius: 5px;
-  background: var(--app-white);
-  text-align: center;
-}
-
-.orderService .buttons {
+.firstRow div,
+.oneLabel div,
+.observSubmit div {
   display: flex;
   flex-direction: column;
-  gap: 30px;
 }
 
-.services:hover {
+.medInput {
+  width: 350px;
+  height: 70px;
+}
+
+.oneLabel {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.detInput {
+  width: 800px;
+  height: 70px;
+}
+
+.observSubmit div {
+  width: 70%;
+  height: 100px;
+}
+
+.observSubmit div input {
+  padding: 5px 5px 5px;
+  height: 100%;
+}
+
+form input,
+select {
+  background: var(--app-white);
+  padding: 5px 5px 5px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  box-shadow: none;
+  color: var(--app-blue);
+  font-size: 1em;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+  z-index: 10;
+}
+
+form input[type="submit"] {
+  border: none;
+  outline: none;
+  background: var(--app-accent);
+  color: var(--app-blue);
+  cursor: pointer;
+  font-size: 1em;
+  border-radius: 5px;
+  font-weight: 600;
+  height: 40px;
+  width: 200px;
+}
+
+form input[type="submit"]:hover {
   background-color: var(--app-yellow);
 }
 
-.services{
-  width: 170px;
-  height: 40px;
-  padding: 9px;
-  font-size: 1em;
-  font-weight: 600;
-  border-radius: 5px;
-  background: var(--app-accent);
-  text-align: center;
-}
-
-a{
-  color: var(--app-blue);
-  text-decoration: none;
-}
-
-.services:active {
+form input[type="submit"]:active {
   opacity: 0.5;
 }
-
 
 /*--------------------CODE FOR FOOTER--------------------*/
 .footer {
   background-color: transparent;
-  position: absolute;
+  position: relative;
   bottom: 0;
 }
 
