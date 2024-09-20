@@ -9,7 +9,6 @@ body {
   height: 100vh;
 }
 
-
 /*--------------------CODE FOR SIDEBAR--------------------*/
 ul {
   padding-left: 0;
@@ -300,81 +299,38 @@ img {
 }
 
 /*--------------------CODE FOR CALENDAR--------------------*/
-.calendar {
+.detailService {
   position: relative;
+  color: var(--app-accent);
   width: 1200px;
   height: 400px;
   background-color: var(--app-blue);
   border: 1px solid var(--app-accent);
   border-radius: 15px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-evenly;
   align-items: center;
 }
 
-#dycalendar {
-  width: 100%;
-  padding: 10px;
-}
-
-#dycalendar table {
-  width: 100%;
-  margin-top: 10px;
-}
-
-#dycalendar table tr:nth-child(1) td {
-  background: var(--app-yellow);
-  color: var(--app-blue);
-  padding: 0;
-  font-weight: 600;
-  height: 20px;
-  cursor: default;
-}
-
-.dycalendar-span-month-year {
-  color: var(--app-white);
-  font-size: 1.5em;
-}
-
-.dycalendar-prev-next-btn.prev-btn,
-.dycalendar-prev-next-btn.next-btn {
-  color: var(--app-accent);
-  font-size: 24px;
-}
-
-.dycalendar-prev-next-btn.prev-btn {
-  right: 600px;
-}
-
-.dycalendar-prev-next-btn.next-btn {
-  left: 600px;
-}
-
-table {
-  border-collapse:separate;
-}
-
-#dycalendar table td {
-  background: var(--app-accent);
-  color: var(--app-blue);
-  cursor: pointer;
-  height: 60px;
-  border-radius: 5px;
-}
-
-#dycalendar table td:hover {
-  background: var(--app-blue);
-  color: var(--app-yellow);
-  border: 1px solid var(--app-yellow);
-}
-
-.dycalendar-month-container .dycalendar-today-date,
-.dycalendar-month-container .dycalendar-target-date {
-  background: var(--app-blue) !important;
-  color: var(--app-accent) !important;
-  border-radius: 5px;
-}
-
+.label .labelType{
+    color: var(--app-white);
+    text-align: center;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+  
+  .label .labelInfo{
+    margin-top: 0;
+    margin-bottom: 30px;
+    color: var(--app-blue);
+    padding: 10px;
+    width: 300px;
+    font-weight: 100;
+    border-radius: 5px;
+    background: var(--app-white);
+    text-align: center;
+  }
 
 /*--------------------CODE FOR FOOTER--------------------*/
 .footer {
